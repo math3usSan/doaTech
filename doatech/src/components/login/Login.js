@@ -13,9 +13,7 @@ const Login = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        console.log("teste", userName, password);
-
-        console.log("Envio");
+        alert("Enviando os Dados:" + userName + " - " + password);
     };
 
   return (
@@ -27,7 +25,7 @@ const Login = () => {
                 <FaUser className='icon' />
             </div>
             <div>
-                <input type='password' placeholder='Senha'></input>
+                <input type='password' placeholder='Senha' onChange={(e) => setPassword(e.target.value)}></input>
                 <FaLock className='icon' />
             </div>
 
